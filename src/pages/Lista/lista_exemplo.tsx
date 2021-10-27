@@ -13,7 +13,7 @@ export function listaExemplo2() {
 
   for (let index = 0; index < 200; index++) {
     lista.push({
-      id: index,
+      id: index + 1,
       item: `Item ${index + 1}`
     });
   }

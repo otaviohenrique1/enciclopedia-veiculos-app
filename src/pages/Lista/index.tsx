@@ -2,12 +2,17 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { ContainerLogin } from "../../components/Container";
 import ReactPaginate from "react-paginate";
-import { listaExemplo } from "./lista_exemplo";
+import { listaExemplo2 } from "./lista_exemplo";
 import { Col, Row, Table } from "reactstrap";
 import styles from './styles.module.css';
 
+interface DataTypes {
+  id: number;
+  item: string;
+}
+
 export function Lista() {
-  const [itens, setItens] = useState<string[]>([]);
+  const [itens, setItens] = useState<DataTypes[]>([]);
   const [page, setPage] = useState<number>(0);
   
   const PER_PAGE = 6;
@@ -15,12 +20,12 @@ export function Lista() {
   const pageCount = Math.ceil(itens.length / PER_PAGE);
   
   useEffect(() => {
-    setItens(listaExemplo);
+    setItens(listaExemplo2);
   }, []);
 
   return (
     <ContainerLoginEstilizado>
-      <Row>
+      <Row className="w-100 h-100">
         <Col md={12}>
           <h1>Lista de itens</h1>
         </Col>
@@ -38,8 +43,8 @@ export function Lista() {
                 .map((item, index) => {
                   return (
                     <tr key={index}>
-                      <td>{index}</td>
-                      <td>{item}</td>
+                      <td>{item.id}</td>
+                      <td>{item.item}</td>
                     </tr>
                   );
                 })}
@@ -51,8 +56,8 @@ export function Lista() {
               breakLabel={'...'}
               breakClassName={'break-me'}
               pageCount={pageCount}
-              marginPagesDisplayed={1}
-              pageRangeDisplayed={1}
+              marginPagesDisplayed={2}
+              pageRangeDisplayed={2}
               onPageChange={handlePageClick}
               containerClassName={styles.pagination}
               previousLinkClassName={styles.pagination_link}

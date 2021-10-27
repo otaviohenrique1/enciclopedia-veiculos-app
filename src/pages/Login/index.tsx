@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { Button, ButtonGroup, Col, Form, FormGroup, Input, Label, Row } from 'reactstrap';
+import { ButtonGroup, Col, Form, FormGroup, Input, Label, Row } from 'reactstrap';
 import styled from 'styled-components';
+import { Botao, BotaoLink } from '../../components/Botao';
 import { ContainerLogin } from '../../components/Container';
 
 export function Login() {
@@ -16,21 +16,33 @@ export function Login() {
               <Col md={12}>
                 <FormGroup>
                   <Label htmlFor="email">Email</Label>
-                  <Input type="email" id="email" />
+                  <Input typeInput="email" id="email" />
                 </FormGroup>
               </Col>
               <Col md={12}>
                 <FormGroup>
                   <Label htmlFor="senha">Senha</Label>
-                  <Input type="password" id="senha" />
+                  <Input typeInput="password" id="senha" />
                 </FormGroup>
               </Col>
               <Col md={12}>
                 <ButtonGroup>
-                  <Button type="button" color="primary">Salvar</Button>
-                  <Button type="button" color="danger">Limpar</Button>
-                  <Link className="btn btn-info" to="/novo-usuario">Novo Usuario</Link>
-                  <Link className="btn btn-link" to="/lista">Lista</Link>
+                  <Botao
+                    type="button"
+                    color="primary"
+                  >Salvar</Botao>
+                  <Botao
+                    type="button"
+                    color="danger"
+                  >Limpar</Botao>
+                  <BotaoLink
+                    className="btn btn-info"
+                    toLink="/novo-usuario"
+                  >Novo Usuario</BotaoLink>
+                  <BotaoLink
+                    className="btn btn-link"
+                    toLink="/lista"
+                  >Lista</BotaoLink>
                 </ButtonGroup>
               </Col>
             </Row>
