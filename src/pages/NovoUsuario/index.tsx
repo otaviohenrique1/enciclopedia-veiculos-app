@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { ContainerLogin } from "../../components/Container";
 import * as Yup from "yup";
 import { Mensagem, MensagemErro } from "../../utils/utils";
-import { Button, Col, Row } from "reactstrap";
+import { ButtonGroup, Col, Row } from "reactstrap";
 import { Form, Formik } from "formik";
 import { Campo } from "../../components/Campo";
 import { AlertMensagemErro } from "../../components/Mensagem";
+import { Botao, BotaoLink } from "../../components/Botao";
 
 interface FormTypes {
   nome: string;
@@ -48,10 +49,10 @@ export function NovoUsuario() {
   return (
     <ContainerLoginEstilizado>
       <Row>
-        <Col md={12}>
+        <Col md={12} className="text-center">
           <h1>Novo Usuario</h1>
         </Col>
-        <Col md={12}>
+        <Col md={12} className="mt-5">
           <Formik
             initialValues={valoresIniciais}
             validationSchema={validacaoSchema}
@@ -70,7 +71,7 @@ export function NovoUsuario() {
                       placeholder="Digite o seu nome"
                       value={values.nome}
                       erro={(errors.nome && touched.nome) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.nome}/>) : null}
-                      classDivContainerCampo="mb-1"
+                      classDivContainerCampo="mb-3"
                     />
                   </Col>
                   <Col md={12}>
@@ -83,7 +84,7 @@ export function NovoUsuario() {
                       placeholder="Digite o seu nome de usuario"
                       value={values.nome_usuario}
                       erro={(errors.nome_usuario && touched.nome_usuario) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.nome_usuario}/>) : null}
-                      classDivContainerCampo="mb-1"
+                      classDivContainerCampo="mb-3"
                     />
                   </Col>
                   <Col md={12}>
@@ -96,7 +97,7 @@ export function NovoUsuario() {
                       placeholder="Digite o seu email"
                       value={values.email}
                       erro={(errors.email && touched.email) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.email}/>) : null}
-                      classDivContainerCampo="mb-1"
+                      classDivContainerCampo="mb-3"
                     />
                   </Col>
                   <Col md={12}>
@@ -109,7 +110,7 @@ export function NovoUsuario() {
                       placeholder="Digite a sua senha"
                       value={values.senha}
                       erro={(errors.senha && touched.senha) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.senha}/>) : null}
-                      classDivContainerCampo="mb-1"
+                      classDivContainerCampo="mb-3"
                     />
                   </Col>
                   <Col md={12}>
@@ -122,12 +123,24 @@ export function NovoUsuario() {
                       placeholder="Digite a sua data de nascimento"
                       value={values.data_nascimento}
                       erro={(errors.data_nascimento && touched.data_nascimento) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.data_nascimento}/>) : null}
-                      classDivContainerCampo="mb-3"
+                      classDivContainerCampo="mb-5"
                     />
                   </Col>
-                  <Col md={12}>
-                    <Button type="submit" color="primary">Salvar</Button>
-                    <Button type="reset" color="danger">Limpar</Button>
+                  <Col md={12} className="text-right">
+                    <ButtonGroup>
+                      <Botao
+                        type="submit"
+                        color="primary"
+                      >Salvar</Botao>
+                      <Botao
+                        type="reset"
+                        color="danger"
+                      >Limpar</Botao>
+                      <BotaoLink
+                        className="btn btn-info"
+                        toLink="/"
+                      >Voltar</BotaoLink>
+                    </ButtonGroup>
                   </Col>
                 </Row>
               </Form>
