@@ -1,6 +1,6 @@
-import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
+import { AnchorHTMLAttributes, ButtonHTMLAttributes, LiHTMLAttributes, MouseEventHandler, ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "reactstrap";
+import { Button, DropdownItem, NavbarText, NavItem } from "reactstrap";
 
 interface BotaoProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   color?: "primary" | "secondary" | "success" | "info" | "warning" | "danger" | "link";
@@ -31,6 +31,47 @@ export function BotaoLink(props: BotaoLinkProps) {
       {...props}
     >
       {props.children}
+    </Link>
+  );
+}
+
+interface NavItemLinkProps extends LiHTMLAttributes<HTMLLIElement> {
+  to: any;
+  label_button: string;
+}
+
+interface BotaoDropdownLinkProps {
+  to: any;
+  label_button: string;
+  onClick?: MouseEventHandler<HTMLAnchorElement>
+}
+
+export function NavItemLink(props: NavItemLinkProps) {
+  return (
+    <NavItem {...props}>
+      <Link
+        to={props.to}
+      >
+        <NavbarText>{props.label_button}</NavbarText>
+      </Link>
+    </NavItem>
+  );
+}
+
+interface BotaoDropdownLinkProps {
+  to: any;
+  label_button: string;
+  onClick?: MouseEventHandler<HTMLAnchorElement>
+}
+
+export function BotaoDropdownLink(props: BotaoDropdownLinkProps) {
+  return (
+    <Link
+      to={props.to}
+      onClick={props.onClick}
+      style={{ textDecoration: 'none' }}
+    >
+      <DropdownItem>{props.label_button}</DropdownItem>
     </Link>
   );
 }

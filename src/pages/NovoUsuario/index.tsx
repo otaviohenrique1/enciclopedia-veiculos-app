@@ -10,7 +10,7 @@ import { Botao, BotaoLink } from "../../components/Botao";
 
 interface FormTypes {
   nome: string;
-  nome_usuario: string;
+  perfil: string;
   email: string;
   senha: string;
   data_nascimento: string;
@@ -20,7 +20,7 @@ export function NovoUsuario() {
   const validacaoSchema = Yup.object().shape({
     nome: Yup.string()
       .required(MensagemErro('nome')),
-    nome_usuario: Yup.string()
+    perfil: Yup.string()
       .min(8, Mensagem('Minimo 6 caracteres'))
       .required(MensagemErro('nome de usuario')),
     email: Yup.string()
@@ -36,7 +36,7 @@ export function NovoUsuario() {
 
   const valoresIniciais: FormTypes = {
     nome: '',
-    nome_usuario: '',
+    perfil: '',
     email: '',
     senha: '',
     data_nascimento: '',
@@ -77,13 +77,13 @@ export function NovoUsuario() {
                   <Col md={12}>
                     <Campo
                       typeInput="text"
-                      label="Nome de usuario"
-                      htmlForLabel="nome_usuario"
-                      inputId="nome_usuario"
-                      name="nome_usuario"
-                      placeholder="Digite o seu nome de usuario"
-                      value={values.nome_usuario}
-                      erro={(errors.nome_usuario && touched.nome_usuario) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.nome_usuario}/>) : null}
+                      label="Nome de usuario (Perfil)"
+                      htmlForLabel="perfil"
+                      inputId="perfil"
+                      name="perfil"
+                      placeholder="Digite o seu perfil de usuario"
+                      value={values.perfil}
+                      erro={(errors.perfil && touched.perfil) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.perfil}/>) : null}
                       classDivContainerCampo="mb-3"
                     />
                   </Col>

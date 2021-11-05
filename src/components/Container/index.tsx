@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 import { Container } from "reactstrap";
 import styled from "styled-components";
+import { Footer } from "../Footer";
+import { Header } from "../Header";
 
 export const ContainerLogin = styled(Container)`
   width: 100%;
@@ -17,13 +19,20 @@ interface ContainerAppProps {
 
 export function ContainerApp(props: ContainerAppProps) {
   return (
-    <ContainerAppEstilizado>
-      {props.children}
-    </ContainerAppEstilizado>
+    <>
+      <Header
+        id={'data.id'}
+        perfil={'data.perfil'}
+      />
+      <ContainerAppEstilizado>
+        {props.children}
+      </ContainerAppEstilizado>
+      <Footer />
+    </>
   );
 }
 
-export const ContainerAppEstilizado = styled(Container)`
+const ContainerAppEstilizado = styled(Container)`
   width: 100%;
   height: 100%;
 `;
