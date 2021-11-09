@@ -4,21 +4,21 @@ import { InputType } from "reactstrap/es/Input";
 import styled from "styled-components";
 
 interface CampoProps extends InputHTMLAttributes<HTMLInputElement> {
-  typeInput: InputType;
+  type_input: InputType;
   erro: any;
-  htmlForLabel: string;
+  htmlfor_Label: string;
   label: string;
-  inputId: string;
-  classDivContainerCampo?: string;
+  input_id: string;
+  class_div_container_campo?: string;
 }
 
 export function Campo(props: CampoProps) {
   return (
-    <ContainerCampo className={props.classDivContainerCampo}>
-      <LabelEstilizado htmlFor={props.htmlForLabel}>{props.label}</LabelEstilizado>
+    <ContainerCampo className={props.class_div_container_campo}>
+      <LabelEstilizado htmlFor={props.htmlfor_Label}>{props.label}</LabelEstilizado>
       <FieldEstilizado
-        type={props.typeInput}
-        id={props.inputId}
+        type={props.type_input}
+        id={props.input_id}
         className="form-control"
         {...props}
       />

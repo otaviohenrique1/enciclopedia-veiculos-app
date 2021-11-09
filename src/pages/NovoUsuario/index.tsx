@@ -63,67 +63,67 @@ export function NovoUsuario() {
                 <Row className="w-100">
                   <Col md={12}>
                     <Campo
-                      typeInput="text"
+                      type_input="text"
                       label="Nome"
-                      htmlForLabel="nome"
-                      inputId="nome"
+                      htmlfor_Label="nome"
+                      input_id="nome"
                       name="nome"
                       placeholder="Digite o seu nome"
                       value={values.nome}
                       erro={(errors.nome && touched.nome) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.nome}/>) : null}
-                      classDivContainerCampo="mb-3"
+                      class_div_container_campo="mb-3"
                     />
                   </Col>
                   <Col md={12}>
                     <Campo
-                      typeInput="text"
+                      type_input="text"
                       label="Nome de usuario (Perfil)"
-                      htmlForLabel="perfil"
-                      inputId="perfil"
+                      htmlfor_Label="perfil"
+                      input_id="perfil"
                       name="perfil"
                       placeholder="Digite o seu perfil de usuario"
                       value={values.perfil}
                       erro={(errors.perfil && touched.perfil) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.perfil}/>) : null}
-                      classDivContainerCampo="mb-3"
+                      class_div_container_campo="mb-3"
                     />
                   </Col>
                   <Col md={12}>
                     <Campo
-                      typeInput="email"
+                      type_input="email"
                       label="Email"
-                      htmlForLabel="email"
-                      inputId="email"
+                      htmlfor_Label="email"
+                      input_id="email"
                       name="email"
                       placeholder="Digite o seu email"
                       value={values.email}
                       erro={(errors.email && touched.email) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.email}/>) : null}
-                      classDivContainerCampo="mb-3"
+                      class_div_container_campo="mb-3"
                     />
                   </Col>
                   <Col md={12}>
                     <Campo
-                      typeInput="password"
+                      type_input="password"
                       label="Senha"
-                      htmlForLabel="senha"
-                      inputId="senha"
+                      htmlfor_Label="senha"
+                      input_id="senha"
                       name="senha"
                       placeholder="Digite a sua senha"
                       value={values.senha}
                       erro={(errors.senha && touched.senha) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.senha}/>) : null}
-                      classDivContainerCampo="mb-3"
+                      class_div_container_campo="mb-3"
                     />
                   </Col>
                   <Col md={12}>
                     <Campo
-                      typeInput="date"
+                      type_input="date"
                       label="Data de nascimento"
-                      htmlForLabel="data_nascimento"
-                      inputId="data_nascimento"
+                      htmlfor_Label="data_nascimento"
+                      input_id="data_nascimento"
                       name="data_nascimento"
                       placeholder="Digite a sua data de nascimento"
                       value={values.data_nascimento}
                       erro={(errors.data_nascimento && touched.data_nascimento) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.data_nascimento}/>) : null}
-                      classDivContainerCampo="mb-5"
+                      class_div_container_campo="mb-5"
                     />
                   </Col>
                   <Col md={12} className="text-right">

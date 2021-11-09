@@ -1,3 +1,4 @@
+import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { ContainerApp } from "../../components/Container";
 import { MensagemErro } from "../../utils/utils";
@@ -70,7 +71,7 @@ export function VeiculoCadastro() {
     armamento: '',
   };
 
-  const validacaoExemplo = Yup.object().shape({
+  const validacaoSchema = Yup.object().shape({
     nome: Yup.string().required(MensagemErro('nome')),
     pais_origem: Yup.string().required(MensagemErro('pais_origem')),
     status: Yup.string().required(MensagemErro('status')),
@@ -99,6 +100,17 @@ export function VeiculoCadastro() {
   return (
     <ContainerApp>
       <h1>Cadastro de veiculo</h1>
+      <Formik
+        validationSchema={validacaoSchema}
+        initialValues={valoresIniciais}
+        onSubmit={() => {}}
+      >
+        {({ errors, touched, values }) => (
+          <Form>
+            <Field/>
+          </Form>
+        )}
+      </Formik>
     </ContainerApp>
   );
 }

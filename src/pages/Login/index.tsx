@@ -41,28 +41,28 @@ export function Login() {
                 <Row>
                   <Col md={12}>
                     <Campo
-                      typeInput="email"
+                      type_input="email"
                       label="Email"
-                      htmlForLabel="email"
-                      inputId="email"
+                      htmlfor_Label="email"
+                      input_id="email"
                       name="email"
                       placeholder="Digite o seu email"
                       value={values.email}
                       erro={(errors.email && touched.email) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.email} />) : null}
-                      classDivContainerCampo="mb-3"
+                      class_div_container_campo="mb-3"
                     />
                   </Col>
                   <Col md={12}>
                     <Campo
-                      typeInput="password"
+                      type_input="password"
                       label="Senha"
-                      htmlForLabel="senha"
-                      inputId="senha"
+                      htmlfor_Label="senha"
+                      input_id="senha"
                       name="senha"
                       placeholder="Digite a sua senha"
                       value={values.senha}
                       erro={(errors.senha && touched.senha) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.senha} />) : null}
-                      classDivContainerCampo="mb-3"
+                      class_div_container_campo="mb-3"
                     />
                   </Col>
                   <Col md={12} className="text-right">
