@@ -24,7 +24,7 @@ export function Home() {
     <ContainerApp>
       <Row>
         <Col md={12}>
-          <h1>Home</h1>
+          <h1>Busca de veiculos</h1>
         </Col>
         <Col md={12}>
           <Formik

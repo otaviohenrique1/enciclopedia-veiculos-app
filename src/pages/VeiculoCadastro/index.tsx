@@ -1,6 +1,9 @@
 import { Formik, Form, Field } from "formik";
+import { Col, Row } from "reactstrap";
 import * as Yup from "yup";
+import { Campo } from "../../components/Campo";
 import { ContainerApp } from "../../components/Container";
+import { AlertMensagemErro } from "../../components/Mensagem";
 import { MensagemErro } from "../../utils/utils";
 // paisOrigem
 // status
@@ -107,7 +110,21 @@ export function VeiculoCadastro() {
       >
         {({ errors, touched, values }) => (
           <Form>
-            <Field/>
+            <Row className="w-100">
+              <Col md={12}>
+                <Campo
+                  type_input="text"
+                  label="Nome"
+                  htmlfor_Label="nome"
+                  input_id="nome"
+                  name="nome"
+                  placeholder="Digite o seu nome"
+                  value={values.nome}
+                  erro={(errors.nome && touched.nome) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.nome}/>) : null}
+                  class_div_container_campo="mb-3"
+                />
+              </Col>
+            </Row>
           </Form>
         )}
       </Formik>
