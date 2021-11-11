@@ -37,7 +37,7 @@ export function Home() {
                 <Row>
                   <Col md={12}>
                     <Campo
-                      type_input="text"
+                      type_input="search"
                       label="Buscar"
                       htmlfor_Label="termoBusca"
                       input_id="termoBusca"

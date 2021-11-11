@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Home } from "./Home/Index";
+import { Home } from "./Home";
 import { Lista } from "./Lista";
 import { Login } from "./Login";
 import { NovoUsuario } from "./NovoUsuario";
