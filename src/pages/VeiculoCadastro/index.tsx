@@ -101,7 +101,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Nome"
-                  htmlfor_Label="nome"
+                  htmlfor_label="nome"
                   input_id="nome"
                   name="nome"
                   placeholder="Digite o nome"
@@ -114,7 +114,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Pais de origem"
-                  htmlfor_Label="pais_origem"
+                  htmlfor_label="pais_origem"
                   input_id="pais_origem"
                   name="pais_origem"
                   placeholder="Digite o pais de origem"
@@ -127,7 +127,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Status" /* (Arrumar - colocar select - opcional) */
-                  htmlfor_Label="status"
+                  htmlfor_label="status"
                   input_id="status"
                   name="status"
                   placeholder="Status do veiculo"
@@ -140,7 +140,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Classificação" /* (Arrumar - colocar select - opcional) */
-                  htmlfor_Label="classificacao"
+                  htmlfor_label="classificacao"
                   input_id="classificacao"
                   name="classificacao"
                   placeholder="Classificação do veiculo"
@@ -153,7 +153,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Tipo"
-                  htmlfor_Label="tipo"
+                  htmlfor_label="tipo"
                   input_id="tipo"
                   name="tipo"
                   placeholder="Tipo do veiculo"
@@ -166,7 +166,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Fabricante"
-                  htmlfor_Label="fabricante"
+                  htmlfor_label="fabricante"
                   input_id="fabricante"
                   name="fabricante"
                   placeholder="Fabricante do veiculo"
@@ -179,7 +179,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Utilizadores"
-                  htmlfor_Label="utilizadores"
+                  htmlfor_label="utilizadores"
                   input_id="utilizadores"
                   name="utilizadores"
                   placeholder="Utilizadores do veiculo"
@@ -192,7 +192,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Variantes"
-                  htmlfor_Label="variantes"
+                  htmlfor_label="variantes"
                   input_id="variantes"
                   name="variantes"
                   placeholder="Variantes do veiculo"
@@ -205,7 +205,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="number"
                   label="Quantidade produzida"
-                  htmlfor_Label="quantidade_produzida"
+                  htmlfor_label="quantidade_produzida"
                   input_id="quantidade_produzida"
                   name="quantidade_produzida"
                   placeholder="Quantidade produzida do veiculo"
@@ -218,7 +218,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Quantidade produzida unidade" /* (Arrumar - colocar select - opcional) */
-                  htmlfor_Label="quantidade_produzida_unidade"
+                  htmlfor_label="quantidade_produzida_unidade"
                   input_id="quantidade_produzida_unidade"
                   name="quantidade_produzida_unidade"
                   placeholder="Quantidade produzida unidade"
@@ -231,7 +231,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Periodo serviço"
-                  htmlfor_Label="periodo_servico"
+                  htmlfor_label="periodo_servico"
                   input_id="periodo_servico"
                   name="periodo_servico"
                   placeholder="Periodo de serviço do veiculo"
@@ -244,7 +244,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="number"
                   label="Massa"
-                  htmlfor_Label="massa"
+                  htmlfor_label="massa"
                   input_id="massa"
                   name="massa"
                   placeholder="Massa do veiculo"
@@ -257,7 +257,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Massa unidade" /* (Arrumar - colocar select - opcional) */
-                  htmlfor_Label="massa_unidade"
+                  htmlfor_label="massa_unidade"
                   input_id="massa_unidade"
                   name="massa_unidade"
                   placeholder="Massa unidade"
@@ -270,7 +270,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="number"
                   label="Comprimento"
-                  htmlfor_Label="comprimento"
+                  htmlfor_label="comprimento"
                   input_id="comprimento"
                   name="comprimento"
                   placeholder="Comprimento do veiculo"
@@ -283,7 +283,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Comprimento unidade" /* (Arrumar - colocar select - opcional) */
-                  htmlfor_Label="comprimento_unidade"
+                  htmlfor_label="comprimento_unidade"
                   input_id="comprimento_unidade"
                   name="comprimento_unidade"
                   placeholder="Comprimento unidade"
@@ -296,7 +296,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="number"
                   label="Altura"
-                  htmlfor_Label="altura"
+                  htmlfor_label="altura"
                   input_id="altura"
                   name="altura"
                   placeholder="Altura do veiculo"
@@ -309,7 +309,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Altura unidade" /* (Arrumar - colocar select - opcional) */
-                  htmlfor_Label="altura_unidade"
+                  htmlfor_label="altura_unidade"
                   input_id="altura_unidade"
                   name="altura_unidade"
                   placeholder="Altura unidade"
@@ -322,7 +322,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="number"
                   label="Largura"
-                  htmlfor_Label="largura"
+                  htmlfor_label="largura"
                   input_id="largura"
                   name="largura"
                   placeholder="Largura do veiculo"
@@ -335,7 +335,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Largura unidade" /* (Arrumar - colocar select - opcional) */
-                  htmlfor_Label="largura_unidade"
+                  htmlfor_label="largura_unidade"
                   input_id="largura_unidade"
                   name="largura_unidade"
                   placeholder="Largura unidade"
@@ -348,7 +348,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="number"
                   label="Tripulação"
-                  htmlfor_Label="tripulacao"
+                  htmlfor_label="tripulacao"
                   input_id="tripulacao"
                   name="tripulacao"
                   placeholder="Tripulação do veiculo quantidade"
@@ -362,7 +362,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="number"
                   label="Custo unitario"
-                  htmlfor_Label="custo_unitario"
+                  htmlfor_label="custo_unitario"
                   input_id="custo_unitario"
                   name="custo_unitario"
                   placeholder="Custo unitario do veiculo"
@@ -375,7 +375,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Custo unitario moeda" /* (Arrumar - colocar select - opcional) */
-                  htmlfor_Label="custo_unitario_moeda"
+                  htmlfor_label="custo_unitario_moeda"
                   input_id="custo_unitario_moeda"
                   name="custo_unitario_moeda"
                   placeholder="Custo unitario moeda"
@@ -388,7 +388,7 @@ export function VeiculoCadastro() {
                 <Campo
                   type_input="text"
                   label="Armamento"
-                  htmlfor_Label="custo_unitario_moeda"
+                  htmlfor_label="custo_unitario_moeda"
                   input_id="custo_unitario_moeda"
                   name="custo_unitario_moeda"
                   placeholder="Armamento do veiculo"

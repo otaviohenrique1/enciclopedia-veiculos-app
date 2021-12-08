@@ -22,7 +22,7 @@ export function Home() {
 
   return (
     <ContainerApp>
-      <Row>
+      <Row className="mt-4">
         <Col md={12}>
           <h1>Busca de veiculos</h1>
         </Col>
@@ -39,7 +39,7 @@ export function Home() {
                     <Campo
                       type_input="search"
                       label="Buscar"
-                      htmlfor_Label="termoBusca"
+                      htmlfor_label="termoBusca"
                       input_id="termoBusca"
                       name="termoBusca"
                       placeholder="Busca de veiculos"

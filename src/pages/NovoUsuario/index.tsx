@@ -13,7 +13,7 @@ interface FormTypes {
   perfil: string;
   email: string;
   senha: string;
-  data_nascimento: string;
+  data_nascimento: Date;
 }
 
 export function NovoUsuario() {
@@ -30,25 +30,34 @@ export function NovoUsuario() {
       .min(8, Mensagem('Minimo 8 caracteres'))
       .max(99, Mensagem('Maximo 99 caracteres'))
       .required(MensagemErro('senha')),
-    data_nascimento: Yup.string()
+    data_nascimento: Yup.date()
       .required(MensagemErro('data de nascimento')),
   });
+
+  // yyyy-MM-dd
 
   const valoresIniciais: FormTypes = {
     nome: '',
     perfil: '',
     email: '',
     senha: '',
-    data_nascimento: '',
+    data_nascimento: new Date(),
   };
 
-  // function handleSubmitForm() {
-    // 
-  // }
+  function handleSubmitForm(values: FormTypes) {
+    let data = {
+      nome: values.nome,
+      perfil: values.perfil,
+      email: values.email,
+      senha: values.senha,
+      data_nascimento: values.data_nascimento,
+    };
+    console.log(data);
+  }
 
   return (
     <ContainerLoginEstilizado>
-      <Row>
+      <Row className="w-75">
         <Col md={12} className="text-center">
           <h1>Novo Usuario</h1>
         </Col>
@@ -56,16 +65,16 @@ export function NovoUsuario() {
           <Formik
             initialValues={valoresIniciais}
             validationSchema={validacaoSchema}
-            onSubmit={() => {}}
+            onSubmit={handleSubmitForm}
           >
             {({ errors, touched, values }) => (
               <Form>
                 <Row className="w-100">
-                  <Col md={12}>
+                  <Col md={6}>
                     <Campo
                       type_input="text"
                       label="Nome"
-                      htmlfor_Label="nome"
+                      htmlfor_label="nome"
                       input_id="nome"
                       name="nome"
                       placeholder="Digite o seu nome"
@@ -74,11 +83,11 @@ export function NovoUsuario() {
                       class_div_container_campo="mb-3"
                     />
                   </Col>
-                  <Col md={12}>
+                  <Col md={6}>
                     <Campo
                       type_input="text"
                       label="Nome de usuario (Perfil)"
-                      htmlfor_Label="perfil"
+                      htmlfor_label="perfil"
                       input_id="perfil"
                       name="perfil"
                       placeholder="Digite o seu perfil de usuario"
@@ -87,11 +96,11 @@ export function NovoUsuario() {
                       class_div_container_campo="mb-3"
                     />
                   </Col>
-                  <Col md={12}>
+                  <Col md={4}>
                     <Campo
                       type_input="email"
                       label="Email"
-                      htmlfor_Label="email"
+                      htmlfor_label="email"
                       input_id="email"
                       name="email"
                       placeholder="Digite o seu email"
@@ -100,11 +109,11 @@ export function NovoUsuario() {
                       class_div_container_campo="mb-3"
                     />
                   </Col>
-                  <Col md={12}>
+                  <Col md={4}>
                     <Campo
                       type_input="password"
                       label="Senha"
-                      htmlfor_Label="senha"
+                      htmlfor_label="senha"
                       input_id="senha"
                       name="senha"
                       placeholder="Digite a sua senha"
@@ -113,15 +122,15 @@ export function NovoUsuario() {
                       class_div_container_campo="mb-3"
                     />
                   </Col>
-                  <Col md={12}>
+                  <Col md={4}>
                     <Campo
                       type_input="date"
                       label="Data de nascimento"
-                      htmlfor_Label="data_nascimento"
+                      htmlfor_label="data_nascimento"
                       input_id="data_nascimento"
                       name="data_nascimento"
                       placeholder="Digite a sua data de nascimento"
-                      value={values.data_nascimento}
+                      value={(values.data_nascimento).toString()}
                       erro={(errors.data_nascimento && touched.data_nascimento) ? (<AlertMensagemErro color="danger" erro_mensagem={errors.data_nascimento}/>) : null}
                       class_div_container_campo="mb-5"
                     />
@@ -138,7 +147,7 @@ export function NovoUsuario() {
                       >Limpar</Botao>
                       <BotaoLink
                         className="btn btn-info"
-                        toLink="/"
+                        to_link="/"
                       >Voltar</BotaoLink>
                     </ButtonGroup>
                   </Col>

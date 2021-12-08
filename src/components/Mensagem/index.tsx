@@ -2,7 +2,7 @@ import { Alert, AlertProps } from "reactstrap";
 
 interface AlertMensagemErroProps extends AlertProps {
   color?: "primary" | "secondary" | "success" | "info" | "warning" | "danger" | "light" | "dark";
-  erro_mensagem: string;
+  erro_mensagem: any;
 }
 
 export function AlertMensagemErro(props: AlertMensagemErroProps) {

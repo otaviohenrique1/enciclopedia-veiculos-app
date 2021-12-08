@@ -26,7 +26,7 @@ export function Login() {
 
   return (
     <ContainerLoginEstilizado>
-      <Row>
+      <Row className="w-75">
         <Col md={12} className="text-center">
           <h1>Login</h1>
         </Col>
@@ -43,7 +43,7 @@ export function Login() {
                     <Campo
                       type_input="email"
                       label="Email"
-                      htmlfor_Label="email"
+                      htmlfor_label="email"
                       input_id="email"
                       name="email"
                       placeholder="Digite o seu email"
@@ -56,7 +56,7 @@ export function Login() {
                     <Campo
                       type_input="password"
                       label="Senha"
-                      htmlfor_Label="senha"
+                      htmlfor_label="senha"
                       input_id="senha"
                       name="senha"
                       placeholder="Digite a sua senha"
@@ -77,7 +77,7 @@ export function Login() {
                       >Limpar</Botao>
                       <BotaoLink
                         className="btn btn-info"
-                        toLink="/novo-usuario"
+                        to_link="/novo-usuario"
                       >Novo Usuario</BotaoLink>
                     </ButtonGroup>
                   </Col>

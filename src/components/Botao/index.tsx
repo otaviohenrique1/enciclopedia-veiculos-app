@@ -19,7 +19,7 @@ export function Botao(props: BotaoProps) {
 }
 
 interface BotaoLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  toLink: any;
+  to_link: any;
   children: ReactNode;
 }
 
@@ -27,7 +27,7 @@ export function BotaoLink(props: BotaoLinkProps) {
   return (
     <Link
       className="btn btn-link"
-      to={props.toLink}
+      to={props.to_link}
       {...props}
     >
       {props.children}

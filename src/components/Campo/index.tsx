@@ -6,7 +6,7 @@ import styled from "styled-components";
 interface CampoProps extends InputHTMLAttributes<HTMLInputElement> {
   type_input: InputType;
   erro: any;
-  htmlfor_Label: string;
+  htmlfor_label: string;
   label: string;
   input_id: string;
   class_div_container_campo?: string;
@@ -15,7 +15,7 @@ interface CampoProps extends InputHTMLAttributes<HTMLInputElement> {
 export function Campo(props: CampoProps) {
   return (
     <ContainerCampo className={props.class_div_container_campo}>
-      <LabelEstilizado htmlFor={props.htmlfor_Label}>{props.label}</LabelEstilizado>
+      <LabelEstilizado htmlFor={props.htmlfor_label}>{props.label}</LabelEstilizado>
       <FieldEstilizado
         type={props.type_input}
         id={props.input_id}
